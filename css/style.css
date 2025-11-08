@@ -6,10 +6,6 @@
     transition: all 0.5s ease;
 }
 
-body {
-    cursor: url(http://www.rw-designer.comm/cursor-extern.php?id=old-macos-win10-11);
-}
-
 :root {
     color-scheme: light dark; /* 支持暗色模式  */
     --blue-color: #00aeec; /* B站主题蓝 */
@@ -38,6 +34,7 @@ body {
     background: var(--light-color);
     animation: blurToClear 1s ease-in-out;
     -webkit-animation: blurToClear 1s ease-in-out;
+    cursor: url(http://www.rw-designer.comm/cursor-extern.php?id=old-macos-win10-11);
 }
 @keyframes blurToClear {
     0% {
