@@ -5,7 +5,7 @@
 <title>Project Page Generator</title>
 <style>
     body { font-family: Arial, sans-serif; padding: 20px; max-width: 700px; margin: auto; }
-    #form-area { display: none; margin-top: 20px; }
+    #form-area { margin-top: 20px; }
     label { display: block; margin-top: 15px; font-weight: bold; }
     input, textarea { width: 100%; padding: 8px; margin-top: 5px; }
     button { margin-top: 20px; padding: 10px 20px; cursor: pointer; }
@@ -15,10 +15,6 @@
 <body>
 
 <h2>🔒 Project Page Generator</h2>
-<p>Enter password to continue:</p>
-
-<input type="password" id="pw" placeholder="Password">
-<button onclick="checkPassword()">Submit</button>
 
 <div id="form-area">
     <h2>Create New Project Page</h2>
@@ -53,19 +49,8 @@
 </div>
 
 <script>
-// ---- 1. Password protection ----
-const PASSWORD = "REPLACE_THIS_WITH_YOUR_PASSWORD"; // <--- SET PASSWORD HERE
-
-function checkPassword() {
-    let input = document.getElementById("pw").value;
-    if (input === PASSWORD) {
-        // Password correct, show form
-        document.getElementById("form-area").style.display = "block";
-    } else {
-        // Incorrect password
-        alert("Incorrect password! Please try again.");
-    }
-}
+// ---- 1. Skip password and show form ----
+document.getElementById("form-area").style.display = "block"; // Show the form directly
 
 // ---- 2. Generate page HTML ----
 let generatedHTML = "";
