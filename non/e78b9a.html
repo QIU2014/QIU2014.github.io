@@ -54,14 +54,16 @@
 
 <script>
 // ---- 1. Password protection ----
-const PASSWORD = "********";
+const PASSWORD = "REPLACE_THIS_WITH_YOUR_PASSWORD"; // <--- SET PASSWORD HERE
 
 function checkPassword() {
     let input = document.getElementById("pw").value;
     if (input === PASSWORD) {
+        // Password correct, show form
         document.getElementById("form-area").style.display = "block";
     } else {
-        alert("Incorrect password!");
+        // Incorrect password
+        alert("Incorrect password! Please try again.");
     }
 }
 
@@ -77,7 +79,7 @@ function generatePage() {
     const notes = document.getElementById("authorNotes").value;
 
     generatedHTML =
-'<!DOCTYPE html>
+`<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -131,7 +133,7 @@ function generatePage() {
 <script src="/js/script.js"></script>
 
 </body>
-</html>';
+</html>`;
 
     document.getElementById("output").textContent = generatedHTML;
     document.getElementById("downloadArea").style.display = "block";
